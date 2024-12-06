@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+
+/* PRIMERA SESIÓN */
+
+.main-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  
+  
+}
+
+.main-view {
+  background: url('/src/assets/foto1.jpeg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: "Parisienne", cursive;
+  font-style: bold;
+  width: auto;
+  height: 70%;
+  position: relative;
+
+
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#93727298, white 100%);
+  z-index: 1;
+
+}
+
+.content {
+  position: absolute;
+  padding: 30px 10px;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  text-align: center;
+  display: flex;
+  /* Habilitar Flexbox */
+  flex-direction: column;
+  /* Organizar elementos en una columna */
+  justify-content: space-between;
+  /* Distribuir elementos por todo el alto */
+  align-items: center;
+  /* Centrar horizontalmente */
+}
+
+
+.verse,
+.quote {
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  font-style: italic;
+  margin: 1rem 0;
+  white-space: nowrap;
+  /* Mantén el texto en una sola línea */
+  overflow: hidden;
+  /* Oculta el texto que exceda el ancho */
+  text-overflow: ellipsis;
+  /* Muestra puntos suspensivos si el texto es demasiado largo */
+  max-width: 100%;
+  /* Asegúrate de que no exceda el ancho del contenedor */
+}
+
+.names {
+  position: relative;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  max-height: 240px;
+  max-width: 290px;
+
+
+}
+
+.july {
+  position: absolute;
+  top: 7%;
+  /* Ajusta la posición vertical */
+  left: 5%;
+  /* Alineación en el eje horizontal */
+  font-size: 3rem;
+  /* Tamaño de "July" */
+  color: #5b3a29
+}
+
+.ampersand {
+  position: absolute;
+  top: 26%;
+  /* Ajusta la posición vertical */
+  left: 48%;
+  /* Ajusta la posición horizontal */
+  font-size: 3rem;
+  color: #5b3a29
+}
+
+.keivin {
+  position: absolute;
+  top: 48%;
+  /* Ajusta la posición vertical */
+  left: 60%;
+  /* Ajusta la posición horizontal */
+  font-size: 3.3rem;
+  color: #5b3a29
+}
+
+.date {
+  font-size: 1rem;
+  font-weight: bold;
+  color:#b9935a;
+}
+
+.container-moments {
+  background: linear-gradient(to bottom, white, #93727298, white);
+  height: auto;
+  /* Ajusta la altura al tamaño deseado */
+  width: 100%;
+  /* Ajusta el ancho al tamaño deseado */
+
+}
+
+/* SEGUNDA SESIÓN */
+
+.moments-container {
+  position: relative;
+  width: 100%;
+  max-width: 390px;
+  height: 700px;
+  margin: 0 auto;
+  justify-content: center;
+  border-radius: 10px;
+  overflow: hidden;
+  font-family: "Parisienne", cursive;
+  font-weight: bold;
+
+}
+
+/* Tarjetas estilo polaroid */
+.moment-card {
+  position: absolute;
+  width: 160px;
+  background: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  text-align: center;
+  transform-origin: center;
+}
+
+.moment-card-5_container{
+  background: url('/src/assets/background.png') no-repeat center center/cover;
+  background-size: 400px 300px;
+}
+
+.moment-card_5{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 10px auto;
+  width: 150px;
+}
+
+.moment-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+  
+}
+
+/* Posiciones específicas de las tarjetas */
+.card-1 {
+  top: 7%;
+  left: 10%;
+  transform: rotate(-10deg);
+}
+
+.card-2 {
+  top: 40%;
+  left: 47%;
+  transform: rotate(10deg);
+}
+
+.card-3 {
+  top: 66%;
+  left: 40px;
+  transform: rotate(-10deg);
+}
+
+/* Estilos para los párrafos */
+.moment-paragraph {
+  position: absolute;
+  font-size: 1rem;
+  color: #5b3a29;
+  text-align: center;
+}
+
+.moment-paragraph.top-left {
+  top: 18%;
+  left: 55%;
+  max-width: 160px;
+}
+
+.moment-paragraph.middle-center {
+  top: 53%;
+  left: 22%;
+  transform: translateX(-50%);
+  max-width: 150px;
+
+}
+
+.moment-paragraph.bottom-right {
+  bottom: 15%;
+  right: 7%;
+  max-width: 130px;
+}
+
+/* Estilo inicial: oculto */
+.fade-in {
+  opacity: 0;
+  transition: opacity 3s ease-out, transform 1s ease-out;
+}
+
+.container-moments-end {
+  width: 100%;
+  padding: 40px;
+
+  text-align: center;
+  color:#b9935a;
+  font-family: "Parisienne", cursive;
+  font-size: 18px;
+
+}
+
+hr {
+  border: none;
+  height: 0.5px;
+  /* Grosor de la línea */
+  background-color: #444;
+  /* Color de la línea */
+  width: 30%;
+  /* Ajustamos el largo de la línea */
+  margin: 0px auto;
+  margin-top: 30px;
+  /* Espaciado antes y después de la línea */
+}
+.invite-section, .timeline-section{
+  background: linear-gradient(to bottom, white, #93727298, white);
+}
+
+/* Estilo cuando son visibles */
+.fade-in.visible {
+  opacity: 1;
+}
+
+
+
+/* SECCIÓN DE INVITACIÓN */
+
+.wedding-invitation-container {
+  text-align: center;
+  font-family: "Parisienne", cursive;
+  /* Fuente cursiva similar */
+  line-height: 1.8;
+  padding: 20px;
+}
+
+/* Contenedor de los padres */
+
+
+.container-flex {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+/* Contenedor de cada lado (Novia y Novio) */
+.wedding-invitation-side {
+  flex: 1;
+  text-align: center;
+  margin-bottom: 20px;
+  /* Espacio entre los elementos */
+  min-width: 50px;
+  padding: 0 10px;
+}
+
+/* Título para los padres */
+.wedding-invitation-h2 {
+  font-size: 2rem;
+  font-family: "Parisienne", cursive;
+  margin-bottom: 20px;
+  color:#b9935a;
+}
+
+/* Subtítulos para Novio y Novia */
+.wedding-invitation-h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+/* Párrafos para los nombres de los padres */
+.wedding-invitation-p {
+  font-size: 0.8rem;
+  font-family: "Parisienne", cursive;
+  margin-bottom: 5px;
+}
+
+/* Sección principal de la invitación */
+.wedding-invitation-main {
+  margin: 30px 0; 
+}
+
+.wedding-invitation-wedding-rings {
+  width: 100px;
+}
+.wedding-invitation-couple{
+  margin: 50px 0;
+}
+
+.wedding-invitation-couple h3 {
+  font-size: 1.5rem;
+  margin: 10px;
+  color: #444;
+}
+
+
+.indication-container{
+  width: 90%;
+  padding: 50px 0;
+  margin: 0 auto;
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+}
+
+
+/* TIME LINE */
+
+
+.timeline-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding-bottom: 70px;
+
+}
+
+
+
+.timeline-event {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+  justify-content: space-between;
+  margin-left: 30px;
+}
+
+.event-time {
+  padding: 10px;
+  color: #444;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.event-content {
+  background: white;
+  border: 1px solid #ddd;
+  text-align: center;
+  border-radius: 5px;
+  margin: 0 auto;
+  padding: 15px;
+  width: 150px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.event-content div{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.event-title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #5b3a29;
+}
+
+.event-button {
+  padding: 5px 10px;
+  background: #b9935a;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 0.7rem;
+}
+
+.event-button:hover {
+  background: #a27e47;
+}
+
+.footer {
+  background-color: #93727298; 
+  text-align: center;       
+  padding: 10px 0;          
+  font-size: 14px;          
+  color: #555;              
+  border-top: 1px solid #ddd; 
+}
+
+
+@media (max-width: 360px) {
+  .moment-paragraph {
+    font-size: 0.8rem;
+  }
+
+  .moment-paragraph.top-left {
+    max-width: 150px;
+  }
+
+  .moment-paragraph.middle-center {
+    max-width: 110px;
+  }
+
+  .moment-paragraph.bottom-right {
+    right: 3%;
+  }
+}
